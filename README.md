@@ -1,4 +1,4 @@
-# An example of how accessing Sigfox data through Google Assistant
+# Access Sigfox data through Google Assistant
 
 ## Introduction
 Since February 2019 and thanks to @lepistom, Google Cloud Platform can now be integrated with Sigfox Backend. 
