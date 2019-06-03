@@ -1,11 +1,10 @@
-# Access Sigfox data through Google Assistant
+# Accessing Sigfox data through Dialogflow
 
 ## Introduction
-Since February 2019 and thanks to @lepistom, Google Cloud Platform can now be integrated with Sigfox Backend. 
-
+Since February 2019, Google Cloud Platform can be officialy integrated with Sigfox Backend. 
 
 Basically, it means that it is now possible to push the data generated from Sigfox enabled devices up to Google Cloud Platform. 
-This article presents how to access this data through the Google Assistant enabling quick and easy read from Google Home, Android devices, iPhones ..
+This article presents how to leverage on this integration by giving users new ways to interact with this data such as voice apps and chatbots, powered by AI. Thus on several and heterogenous platforms like your own website, mobile app, the Google Assistant, Amazon Alexa, Facebook Messenger, and many others..
 
 ## Overview
 
