@@ -10,7 +10,8 @@ Here the goal is show how the data measured by a [Sens'it](https://build.sigfox.
 
 ![Image](img/Google_Dialogflow_Scheme.png)
 
-Regarding the previous integration, you can check the related tutorials: [Integrating Sigfox IoT network with Google Cloud Platform](https://cloud.google.com/community/tutorials/sigfox-gw) and [Using Sigfox Sens'it with GCP](https://cloud.google.com/community/tutorials/sigfox-sensit).
+Regarding the previous integration, you can check the related tutorials: [Integrating Sigfox IoT network with Google Cloud Platform](https://cloud.google.com/community/tutorials/sigfox-gw) and [Using Sigfox Sens'it with GCP](https://cloud.google.com/community/tutorials/sigfox-sensit). All credits to
+[Markku Lepisto](https://github.com/lepistom).
 
 ## DialogFlow Implementation
 
@@ -113,5 +114,12 @@ You can find the complete associated code in this GitHub repository.
 
 The app can now be integrated with several platforms and interfaces. [Here](https://medium.com/heptagon/chapter-12-how-to-build-a-google-home-app-with-dialogflow-app-deployment-9596bd74d9ad) you can find some information on how to do it. 
 
+## Results
 
+Here below is the last row of my Sens'it BigQuery table:
 
+![Image](img/GoogleBigQueryData.png)
+
+And here are some screenshots of the Sigfox chatbot conversation:
+
+![SigfoxChatbotTemperature](img/SigfoxChatbotConversation.PNG) 
