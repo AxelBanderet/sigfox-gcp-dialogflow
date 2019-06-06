@@ -118,7 +118,7 @@ The app can now be integrated with several platforms and interfaces. [Here](http
 
 Here below is the last row of my Sens'it BigQuery table:
 
-![Image](img/GoogleBigQueryData.png)
+![Image](img/GoogleBigQueryData.PNG)
 
 And here are some screenshots of the Sigfox chatbot conversation:
 
