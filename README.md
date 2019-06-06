@@ -38,11 +38,11 @@ In my example, I have configured the Sigfox intent to ask the user to chose a da
 
 Google allows to write code that will be triggered at a certain moment during the Intent processing. This is called **Fulfillment**. Here below is an overview of how it works:
 ![Image](img/dialogflow_agent.png)
-That said, it means that the last thing we have to do is to write the portion of code that will ask the data to Google Big Query, filter it and finally deliver it to our Sigfox Intent.
+That said, it means that the last thing that has to be done is to write the portion of code that will request the data to Google Big Query, filter it and finally deliver it to our Sigfox Intent.
 
 #### Constants definition
 
-Like in every project, you need to define constants. Here they are:
+Like in every project, constants are needed. Here they are:
 
 ```javascript
 'use strict';
@@ -107,7 +107,11 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 });
 ```
 
+You can find the complete associated code in this GitHub repository.
 
+## Integration 
+
+The app can now be integrated with several platforms and interfaces. [Here](https://medium.com/heptagon/chapter-12-how-to-build-a-google-home-app-with-dialogflow-app-deployment-9596bd74d9ad) you can find some information on how to do it. 
 
 
 
