@@ -33,13 +33,13 @@ So, we need to create the **Sigfox Intent** that will handle requests about Sigf
 ### Sigfox Intent Configuration
 
 Intent configuration is well explained in many articles. Feel free to check these out, for instance [here](https://medium.com/swlh/chapter-8-how-to-build-a-google-home-app-with-dialogflow-environment-setup-3547993e99a4).
-In this example, I have configured the Sigfox intent to ask the user to chose a data type between *temperature* and *humidity*. This parameter will be used then to filter the answer.
+In this example, I have configured the Sigfox intent to ask the user to choose a data type between *temperature* and *humidity*. This parameter will be used then to filter the answer.
 
 ### Fulfillment
 
 Dialogflow allows to write code that will be triggered at a certain moment during the Intent processing. This is called **Fulfillment**. Here below is an overview of how it works:
 ![Image](img/dialogflow_agent.png)
-That said, it means that the last thing that has to be done is to write the portion of code that will request the data to Google Big Query, filter it and finally deliver it to our Sigfox Intent.
+That said, it means that the last thing that has to be done is to write the portion of code that will request the data to Google BigQuery, filter it and finally deliver it to our Sigfox Intent.
 
 #### Constants definition
 
@@ -63,9 +63,9 @@ process.env.DEBUG = 'dialogflow:debug';
 1. The fulfillment will query BigQuery database and select the last line based on the [*Sequence Number*](https://support.sigfox.com/docs/sequence-number:-general-knowledge).
 Make sure to fill in the query parameters with your Google Cloud Platform information.
 
-2. Depending on which data type has been chosen by the user, fulffilment will filter the corresponding field (ie temperature or humidity).
+2. Depending on which data type has been chosen by the user, fulfillment will filter the corresponding field (ie temperature or humidity).
 
-3. Fulffilment will deliver the answer to the Sigfox Intent.
+3. Fulfillment will deliver the answer to the Sigfox Intent.
 
 ```javascript
 function getDataFromBigQuery(agent) {
