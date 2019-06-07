@@ -4,7 +4,7 @@
 
 Since February 2019, Google Cloud Platform and Sigfox Backend can be officialy integrated. Basically, it means that it is now possible to push the data generated from Sigfox enabled devices up to Google Cloud Platform. 
 
-This article presents how to leverage on this integration by giving users new ways to interact with this data such as voice apps and chatbots, powered by AI. This, on several and heterogenous platforms like your own website, mobile app, the Google Assistant, Amazon Alexa, Facebook Messenger, and many others..
+This article presents how to leverage on this integration by giving users new ways to interact with this data such as voice apps and chatbots, powered by AI. This, on several heterogenous platforms like your own website, mobile app, the Google Assistant, Amazon Alexa, Facebook Messenger, and many others..
 
 Here the goal is show how the data measured by a [Sens'it](https://build.sigfox.com/sensit-for-developers) can be exposed via Dialogflow.
 
