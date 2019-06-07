@@ -2,42 +2,42 @@
 
 ## Introduction
 
-Since February 2019, Google Cloud Platform can be officialy integrated with Sigfox Backend. Basically, it means that it is now possible to push the data generated from Sigfox enabled devices up to Google Cloud Platform. 
+Since February 2019, Google Cloud Platform and Sigfox Backend can be officialy integrated. Basically, it means that it is now possible to push the data generated from Sigfox enabled devices up to Google Cloud Platform. 
 
 This article presents how to leverage on this integration by giving users new ways to interact with this data such as voice apps and chatbots, powered by AI. This, on several and heterogenous platforms like your own website, mobile app, the Google Assistant, Amazon Alexa, Facebook Messenger, and many others..
 
-Here the goal is show how the data measured by a [Sens'it](https://build.sigfox.com/sensit-for-developers) can be exposed via DialogFlow.
+Here the goal is show how the data measured by a [Sens'it](https://build.sigfox.com/sensit-for-developers) can be exposed via Dialogflow.
 
 ![Image](img/Google_Dialogflow_Scheme.png)
 
 Regarding the previous integration, you can check the related tutorials: [Integrating Sigfox IoT network with Google Cloud Platform](https://cloud.google.com/community/tutorials/sigfox-gw) and [Using Sigfox Sens'it with GCP](https://cloud.google.com/community/tutorials/sigfox-sensit). All credits to
 [Markku Lepisto](https://github.com/lepistom).
 
-## DialogFlow Implementation
+## Dialogflow Implementation
 
-DialogFlow is a Google-owned interface of human–computer interaction that allow you to recognize sentences sent by the user and select appropriate *actions* based on configuration and machine learning. 
+Dialogflow is a Google-owned interface of human–computer interaction that allow to recognize sentences sent by the user and select appropriate *actions* based on configuration and machine learning. 
 
 ### Sigfox Agent
 
 In Dialogflow, the basic stream of a conversation involves these steps:
 
     - The user gives inputs
-    - Your Dialogflow agent parses that input
+    - Your Dialogflow agent parses those inputs
     - Your agent returns a response to the user
 
-To define how conversations work, you create **intents** within your agent that map user inputs to responses.
+To define how conversations work, it is needed to create **intents** within the agent that map user inputs to responses.
 When defining a new agent, you will get by default the **Default Welcome intent** and the **Default Fallback Intent**.
 
 So, we need to create the **Sigfox Intent** that will handle requests about Sigfox.
 
 ### Sigfox Intent Configuration
 
-Intent configuration is well explained in many articles. Feel free to check these out for instance [here](https://medium.com/swlh/chapter-8-how-to-build-a-google-home-app-with-dialogflow-environment-setup-3547993e99a4).
-In my example, I have configured the Sigfox intent to ask the user to chose a data type between *temperature* and *humidity*. This parameter will be used then to filter the answer.
+Intent configuration is well explained in many articles. Feel free to check these out, for instance [here](https://medium.com/swlh/chapter-8-how-to-build-a-google-home-app-with-dialogflow-environment-setup-3547993e99a4).
+In this example, I have configured the Sigfox intent to ask the user to chose a data type between *temperature* and *humidity*. This parameter will be used then to filter the answer.
 
 ### Fulfillment
 
-Google allows to write code that will be triggered at a certain moment during the Intent processing. This is called **Fulfillment**. Here below is an overview of how it works:
+Dialogflow allows to write code that will be triggered at a certain moment during the Intent processing. This is called **Fulfillment**. Here below is an overview of how it works:
 ![Image](img/dialogflow_agent.png)
 That said, it means that the last thing that has to be done is to write the portion of code that will request the data to Google Big Query, filter it and finally deliver it to our Sigfox Intent.
 
@@ -65,7 +65,7 @@ Make sure to fill in the query parameters with your Google Cloud Platform inform
 
 2. Depending on which data type has been chosen by the user, fulffilment will filter the corresponding field (ie temperature or humidity).
 
-3. The fulffilment will deliver the answer to the Sigfox Intent.
+3. Fulffilment will deliver the answer to the Sigfox Intent.
 
 ```javascript
 function getDataFromBigQuery(agent) {
@@ -108,7 +108,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 });
 ```
 
-You can find the complete associated code in this GitHub repository.
+You can find the complete code in this GitHub repository.
 
 ## Integration 
 
