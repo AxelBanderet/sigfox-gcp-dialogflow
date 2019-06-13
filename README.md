@@ -120,6 +120,10 @@ Here below is the last row of my Sens'it BigQuery table:
 
 ![Image](img/GoogleBigQueryData.PNG)
 
-And here are some screenshots of the Sigfox chatbot conversation:
+Here are some screenshots of the Sigfox chatbot conversation:
 
 ![SigfoxChatbotTemperature](img/SigfoxChatbotConversation.PNG) 
+
+And here an illustration through my Google Home:
+
+[![Alt text](https://img.youtube.com/vi/52bZFR4ZqFo/0.jpg)](https://www.youtube.com/watch?v=52bZFR4ZqFo)
